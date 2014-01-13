@@ -14,10 +14,10 @@ def parse_host(host):
             if line[0]=='#':
                 continue
             tokens=line.split()
-            if tokens[1]==host:
+            if len(tokens)>1 and tokens[1]==host:
                 return tokens[0]
             if len(tokens)>2 and tokens[2]==host:
-                return token
+                return tokens[0]
 def run():
     cmd='corkscrew '+" ".join(sys.argv[1:3])+" "+parse_host(sys.argv[3])+" "+" ".join(sys.argv[4:])
 #    print cmd
