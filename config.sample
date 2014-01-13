@@ -1,0 +1,3 @@
+Host *
+#   ProxyCommand corkscrew 127.0.0.1 2010 %h %p ~/.ssh/proxyauth
+  ProxyCommand ~/.ssh/ssh_proxy.py 127.0.0.1 2010 %h %p ~/.ssh/proxyauth
